@@ -1,0 +1,120 @@
+/* Add this to the top to import the handwritten font */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+/* Import a handwriting-style font */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Patrick Hand', cursive; /* Handwritten font */
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-right: 2px solid black; /* Simulate typing cursor */
+    white-space: nowrap;
+    overflow: hidden; 
+    width: 0; /* Initial width for animation */
+    max-width: 100%;
+    display: inline-block;
+}
+
+/* Customize the typing effect */
+@keyframes typingEffect {
+    from { width: 0; }
+    to { width: 18ch; } /* Adjust for number of characters */
+}
+
+@keyframes blink {
+    0% { border-color: transparent; }
+    50% { border-color: black; }
+    100% { border-color: transparent; }
+}
+
+/* Set up typing effect */
+h1 {
+    animation: typingEffect 4s steps(18) 1s forwards, blink 1s infinite;
+}
+
+/* Additional styles */
+h2 {
+    margin-bottom: 20px;
+}
+
+.todo-form {
+    margin-bottom: 30px;
+}
+
+.todo-form input, .todo-form button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.todo-form input[type="color"] {
+    width: 60px;
+}
+
+.todo-list {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: white;
+}
+
+.task-text {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.task button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task .edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.task .delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.task .save {
+    background-color: #00bcd4;
+    color: white;
+}
+
+.task .complete {
+    background-color: #FFA500;
+    color: white;
+}

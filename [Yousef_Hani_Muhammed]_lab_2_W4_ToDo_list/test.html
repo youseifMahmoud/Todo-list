@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Color Options</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- To-Do List Title with Typing Effect -->
+    <h1 id="dynamicText"></h1>
+
+    <!-- To-Do Input Form -->
+    <div class="todo-form">
+        <input type="text" id="taskTitle" placeholder="Enter task title" required>
+        <input type="color" id="textColor" value="#ffffff">
+        <input type="color" id="bgColor" value="#000000">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <!-- Active To-Do List -->
+    <h2>Tasks</h2>
+    <div class="todo-list" id="todoList"></div>
+
+    <!-- Completed Tasks List -->
+    <h2>Tasks Ended</h2>
+    <div class="todo-list" id="endedTasks"></div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
